@@ -1,0 +1,64 @@
+﻿<%= form_for(@contact) do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "erreur(s)") %> trouvée(s) dans le formulaire:</h2>
+
+      <ul>
+      <% @contact.errors.messages.each do |msg| %>
+        <li><%= msg.last.last.html_safe %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div id="left">
+  <div class="field" id="formClient">
+    <%= f.label :nom %><br />
+    <%= f.text_field :nom %>
+  </div>
+  <div class="field" id="formClient">
+    <%= f.label :prenom %><br />
+    <%= f.text_field :prenom %>
+  </div>
+  <div class="field" id="formClient">
+    <%= f.label :adresse %><br />
+    <%= f.text_field :adresse %>
+  </div>
+  <div class="field" id="formClient">
+    <%= f.label :complement %><br />
+    <%= f.text_field :complement %>
+  </div>
+  <div class="field" id="formClient">
+    <%= f.label :cp %><br />
+    <%= f.text_field :cp %>
+  </div>
+  <div class="field" id="formClient">
+    <%= f.label :ville %><br />
+    <%= f.text_field :ville %>
+  </div>
+  <div class="field" id="formClient">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field" id="formClient">
+    <%= f.label :fixe %><br />
+    <%= f.text_field :fixe %>
+  </div>
+  <div class="field" id="formClient">
+    <%= f.label :mobile %><br />
+    <%= f.text_field :mobile %>
+  </div>
+  <div class="field" id="formClient">
+  <%= f.label :commentaire %><br/>
+  <%= f.text_area :commentaire %>
+  </div>
+  <br/><br/>
+  <div class="actions" id="submitClient">
+    <%= f.submit "S'inscrire" %>
+  </div>
+</div>
+<div id="right">
+	<%= image_tag "exunImagesFiles/panneau-form.png", :style => "margin-left: 80px; margin-top: 0px; margin-bottom: 20px; height: 430px" %>
+</div>
+<div style="clear: both;"></div>
+<% end %>
