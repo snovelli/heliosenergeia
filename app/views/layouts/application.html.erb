@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-  <title>Helios Energia</title>
+  <title>Helios Energeia</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -15,13 +15,14 @@
 <div id="menu">
 	<ul>
 		<li><%= link_to"Accueil", root_path %></li>
-		<li><%= link_to"Qui sommes-nous", whoarewe_index_path %></li>
-		<li><%= link_to"Services", services_index_path %></li>
-		<li><a href=""  title="" >Solutions</a></li>
+		<li><%= link_to"Qui sommes-nous", whoarewe_index_path %><li>
+		<li><a href="/inprogress.html"  title="" >Services</a></li> <!-- <%= link_to"Services", services_index_path %> -->
+		<li><a href="/inprogress.html"  title="" >Solutions</a></li>
 		<li><%= link_to"Grands projets", grandprojet_index_path %></li>
 		<li><%= link_to("Être contacté", new_contact_path) %></li>
-		<li><%= link_to "Admin", contacts_path %></li>
+		<li><a href="/inprogress.html"  title="" >Admin</a></li> <!-- <%= link_to "Admin", contacts_path %> -->
 	</ul>
+	
 </div>
 
 
